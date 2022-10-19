@@ -4,8 +4,6 @@ import Row from 'react-bootstrap/Row'
 import { Controller, get, useFormContext } from 'react-hook-form'
 import Select from 'react-select'
 
-import '../styles.scss'
-
 interface IOption {
   [K: string]: any
 }
