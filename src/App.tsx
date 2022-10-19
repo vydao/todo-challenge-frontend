@@ -3,10 +3,10 @@ import { Suspense } from 'react'
 import { Switch, BrowserRouter } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
 import routes from 'router/routes'
 import PermissionRoute from 'router/PermissionRoute'
 import Loading from 'components/Loading'
+import './App'
 
 const App = () => {
   return (
