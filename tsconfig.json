@@ -18,11 +18,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "noFallthroughCasesInSwitch": true
   },
   "eslintConfig": {
-    "extends": ["react-app", "shared-config"],
+    "extends": [
+      "react-app",
+      "shared-config"
+    ],
     "globals": {
       "google": true,
       "toastr": true
@@ -32,7 +35,9 @@
     },
     "overrides": [
       {
-        "files": ["**/*.ts?(x)"],
+        "files": [
+          "**/*.ts?(x)"
+        ],
         "rules": {
           "additional-typescript-only-rule": "warn"
         }
@@ -42,5 +47,10 @@
   "include": [
     "src"
   ],
-  "exclude": ["node_modules", "**/node_modules", "dist", "yarn.lock"]
+  "exclude": [
+    "node_modules",
+    "**/node_modules",
+    "dist",
+    "yarn.lock"
+  ]
 }

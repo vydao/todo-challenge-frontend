@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Suspense } from 'react'
+import { Switch, BrowserRouter } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+
+import routes from 'router/routes'
+import PermissionRoute from 'router/PermissionRoute'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Suspense fallback="loading">
+      <BrowserRouter>
+      <ToastContainer closeOnClick pauseOnHover hideProgressBar autoClose={3000} newestOnTop={false} rtl={false} />
+      <Switch>
+        <Suspense fallback='loading'>
+        {routes.map((route, index) => (
+          <PermissionRoute
+          path={route.path}
+          exact={route.exact}
+          name={route.name}
+          component={route.component}
+          key={index}
+          />
+          ))}
+        </Suspense>
+      </Switch>
+      </BrowserRouter>
+      </Suspense>
+  )
 }
 
-export default App;
+export default App
