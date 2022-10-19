@@ -5,14 +5,15 @@ import { ToastContainer } from 'react-toastify'
 
 import routes from 'router/routes'
 import PermissionRoute from 'router/PermissionRoute'
+import Loading from 'components/Loading'
 
 const App = () => {
   return (
-    <Suspense fallback="loading">
+    <Suspense fallback={<Loading />}>
       <BrowserRouter>
       <ToastContainer closeOnClick pauseOnHover hideProgressBar autoClose={3000} newestOnTop={false} rtl={false} />
       <Switch>
-        <Suspense fallback='loading'>
+        <Suspense fallback={<Loading />}>
         {routes.map((route, index) => (
           <PermissionRoute
           path={route.path}
