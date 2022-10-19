@@ -1,0 +1,11 @@
+.form-check-input {
+  cursor: pointer;
+  &:focus {
+    border-color: green;
+  }
+  &:checked {
+    background-color: green;
+    border-color: green;
+    background-image: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27><circle r=%273%27 fill='%233fae29'/%3E%3C/svg%3E/></svg>");
+  }
+}
