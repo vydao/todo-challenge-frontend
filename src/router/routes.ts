@@ -2,6 +2,7 @@ import React from 'react'
 
 const HomePage = React.lazy(() => import('../pages/HomePage'))
 const Login = React.lazy(() => import('../pages/Login'))
+const AddChallenge = React.lazy(() => import('../pages/AddChallenge'))
 
 
 const routes = [
@@ -16,6 +17,12 @@ const routes = [
     exact: true,
     name: 'Login',
     component: Login,
+  },
+  {
+    path: '/add-challenge',
+    exact: true,
+    name: 'Add Challenge',
+    component: AddChallenge,
   },
 ]
 
