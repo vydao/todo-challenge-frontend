@@ -6,6 +6,7 @@ import { FormProvider, useForm } from 'react-hook-form'
 
 import { yupResolver } from '@hookform/resolvers/yup'
 
+import Checkbox from 'components/CheckBox'
 import Input from 'pages/components/common/Input'
 
 const schema = () =>
@@ -19,6 +20,7 @@ const AddChallenge = () => {
     defaultValues: {
       account: '',
       point: '',
+      required: false,
     },
     resolver: yupResolver(schema()),
   })
@@ -33,6 +35,7 @@ const AddChallenge = () => {
             <Form onSubmit={methods.handleSubmit(onSubmit)}>
               <Input name={'task'} label={'Task'} />
               <Input name={'point'} label={'Point'} />
+              <Checkbox name="required" label="Required" />
               <Button type="submit">Add</Button>
             </Form>
           </FormProvider>

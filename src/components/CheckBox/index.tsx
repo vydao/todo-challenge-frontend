@@ -1,28 +1,20 @@
-import React, { memo } from 'react'
+import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import { FormCheckType } from 'react-bootstrap/esm/FormCheck'
 import { get, useFormContext } from 'react-hook-form'
 
-import './style.scss'
+import './styles.scss'
 
 interface ICheckBox {
   name: string
   label: string
-  required?: boolean
   disabled?: boolean
   inputType?: string
   className?: string
 }
 
-const Checkbox = ({
-  name,
-  label,
-  required = true,
-  disabled = false,
-  className = '',
-  inputType = 'checkbox',
-}: ICheckBox) => {
+const Checkbox = ({ name, label, disabled = false, className = '', inputType = 'checkbox' }: ICheckBox) => {
   const {
     register,
     formState: { errors },
@@ -39,12 +31,7 @@ const Checkbox = ({
           inline
           id="custom-switch"
           className={`pt-2 style-label ${className}`}
-          label={
-            <span className="text-dark">
-              <span className={required ? 'required' : ''} />
-              {' ' + label}
-            </span>
-          }
+          label={<span className="text-dark">{label}</span>}
           {...register(name)}
         />
         <Form.Label className="text-danger mt-1 d-block">{error}</Form.Label>
@@ -53,4 +40,4 @@ const Checkbox = ({
   )
 }
 
-export default memo(Checkbox)
+export default Checkbox
