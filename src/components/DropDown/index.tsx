@@ -64,7 +64,7 @@ const DropDown = ({
   return (
     <Row>
       <Form.Group>
-        <Form.Label>{label}</Form.Label>
+        <Form.Label className="text-white">{label}</Form.Label>
         <Controller
           control={control}
           defaultValue={defaultValue}

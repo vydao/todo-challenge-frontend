@@ -3,8 +3,6 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import { get, useFormContext } from 'react-hook-form'
 
-import '../styles.scss'
-
 interface IInput {
   name: string
   label: string
@@ -33,7 +31,7 @@ const Input = ({
   return (
     <Row>
       <Form.Group>
-        <Form.Label className={required ? 'required' : ''}>{label}</Form.Label>
+        <Form.Label className="text-white">{label}</Form.Label>
         <Form.Control
           autoFocus={false}
           className={className}

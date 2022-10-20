@@ -5,8 +5,8 @@ import { Button, Form } from 'react-bootstrap'
 import { FormProvider, useForm } from 'react-hook-form'
 
 import { yupResolver } from '@hookform/resolvers/yup'
+import Input from 'components/Input'
 
-import Input from 'pages/components/common/Input'
 
 const loginSchema = () =>
   yup.object({
@@ -28,7 +28,7 @@ const Login = () => {
     <div className="container ">
       <div className="row justify-content-center">
         <div className="col-md-4">
-          <h1>Login</h1>
+          <h1 className="text-white">Login</h1>
           <FormProvider {...methods}>
             <Form onSubmit={methods.handleSubmit(onSubmit)}>
               <Input name={'account'} label={'Account'} />
