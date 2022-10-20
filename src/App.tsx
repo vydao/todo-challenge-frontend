@@ -1,33 +1,42 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Header from 'pages/Header'
+import PermissionRoute from 'router/PermissionRoute'
+import routes from 'router/routes'
 
 import { Suspense } from 'react'
-import { Switch, BrowserRouter } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
+import { BrowserRouter, Switch } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import routes from 'router/routes'
-import PermissionRoute from 'router/PermissionRoute'
+
 import Loading from 'components/Loading'
-import './App'
+
+import './App.scss'
 
 const App = () => {
   return (
     <Suspense fallback={<Loading />}>
       <BrowserRouter>
-      <ToastContainer closeOnClick pauseOnHover hideProgressBar autoClose={3000} newestOnTop={false} rtl={false} />
-      <Switch>
-        <Suspense fallback={<Loading />}>
-        {routes.map((route, index) => (
-          <PermissionRoute
-          path={route.path}
-          exact={route.exact}
-          name={route.name}
-          component={route.component}
-          key={index}
-          />
-          ))}
-        </Suspense>
-      </Switch>
+        <ToastContainer closeOnClick pauseOnHover hideProgressBar autoClose={3000} newestOnTop={false} rtl={false} />
+        <Switch>
+          <Suspense fallback={<Loading />}>
+            <div className="app">
+              <Header />
+              <Container>
+                {routes.map((route, index) => (
+                  <PermissionRoute
+                    path={route.path}
+                    exact={route.exact}
+                    name={route.name}
+                    component={route.component}
+                    key={index}
+                  />
+                ))}
+              </Container>
+            </div>
+          </Suspense>
+        </Switch>
       </BrowserRouter>
-      </Suspense>
+    </Suspense>
   )
 }
 

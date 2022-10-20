@@ -4,8 +4,6 @@ import Row from 'react-bootstrap/Row'
 import { FormCheckType } from 'react-bootstrap/esm/FormCheck'
 import { get, useFormContext } from 'react-hook-form'
 
-import './styles.scss'
-
 interface ICheckBox {
   name: string
   label: string
@@ -23,7 +21,7 @@ const Checkbox = ({ name, label, disabled = false, className = '', inputType = '
 
   return (
     <Row>
-      <Form.Group className="mt-4">
+      <Form.Group>
         <Form.Check
           type={inputType as FormCheckType}
           disabled={disabled}
@@ -31,7 +29,7 @@ const Checkbox = ({ name, label, disabled = false, className = '', inputType = '
           inline
           id="custom-switch"
           className={`pt-2 style-label ${className}`}
-          label={<span className="text-dark">{label}</span>}
+          label={<span className="text-white">{label}</span>}
           {...register(name)}
         />
         <Form.Label className="text-danger mt-1 d-block">{error}</Form.Label>
