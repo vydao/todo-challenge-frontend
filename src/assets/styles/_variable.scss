@@ -1,0 +1,66 @@
+$colors: (
+  "dark1": #2b3e50,
+  "dark2": #050505,
+  "gray1": #444444,
+  "gray2": #a1a1a1,
+  "gray3": #dbdbdb,
+  "gray4": #f5f5f5,
+  "gray5": #7c7c7c,
+  "gray6": #f9f9f9,
+  "gray7": #e8e8e8,
+  "gray8": #e9ecef,
+  "gray9": #ced4da,
+  "blue1": #009fe8,
+  "blue2": #17a2b8,
+  "white1": #fff,
+  "white2": #404040,
+  "red1": #f44336,
+  "red2": #d91a0c,
+  "red3": rgba(220, 53, 69, 0.25),
+  "green1": #3fae29,
+  "green2": #0e730f,
+  "green3": rgba(105, 170, 121, 0.25),
+  "black1": #282828,
+  "black2": #262626,
+  "black3": #000000,
+  "black4": #9d9c9c,
+  "yellow1": #ffdb00,
+);
+
+$zIndex: (
+  "z-1": -1,
+  "z0": 0,
+  "z1": 1,
+  "z2": 2,
+  "z3": 3,
+  "z4": 4,
+  "z5": 5,
+);
+
+$danger: map-get($colors, "red1");
+
+$font: (
+  "font-roboto-regular": "Roboto-Regular",
+  "font-roboto-medium": "Roboto-Medium",
+);
+
+$fontSize: (
+  "fs14": 14px,
+  "fs16": 16px,
+  "fs18": 18px,
+  "fs20": 20px,
+  "fs22": 22px,
+);
+
+$fontWeight: (
+  "fw1": 100,
+  "fw2": 200,
+  "fw3": 300,
+  "fw4": 400,
+  "fw5": 500,
+);
+
+$radius: (
+  "r1": 0.375rem,
+  "r2": 0.375rem,
+);
