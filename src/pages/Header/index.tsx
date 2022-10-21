@@ -13,6 +13,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+            <Nav.Link className="text-white" href="/challenges">
+              Challenges
+            </Nav.Link>
             <Nav.Link className="text-white" href="/add-challenge">
               Add Challenge
             </Nav.Link>

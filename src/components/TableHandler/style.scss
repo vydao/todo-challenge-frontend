@@ -1,0 +1,73 @@
+@import "~assets/styles/variable";
+@import "~assets/styles/mixins";
+
+.style-color {
+  color: map-get($colors, "black1");
+}
+.table {
+  font-size: map-get($fontSize, "fs14");
+  th {
+    white-space: nowrap;
+  }
+  color: map-get($colors, "gray1");
+}
+.arrow-down::after {
+  color: map-get($colors, "green2");
+  display: inline-block;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+.arrow-up::after {
+  color: map-get($colors, "green2");
+  display: inline-block;
+  content: "";
+  border-top: 0;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.3em solid;
+  border-left: 0.3em solid transparent;
+}
+.arrow-up {
+  top: -30%;
+}
+.arrow-down {
+  top: 0;
+}
+.arrow-default-down {
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  top: 60%;
+}
+.arrow-default-up {
+  content: "";
+  border-top: 0;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.3em solid;
+  border-left: 0.3em solid transparent;
+  top: 25%;
+}
+
+.table::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: map-get($colors, "gray4");
+  border-radius: 10px;
+}
+
+.table::-webkit-scrollbar {
+  width: 8px;
+  background-color: map-get($colors, "gray4");
+}
+
+.table::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: map-get($colors, "gray5");
+}
+
+.table::-webkit-scrollbar-thumb:hover {
+  background-color: map-get($colors, "gray5");
+}
