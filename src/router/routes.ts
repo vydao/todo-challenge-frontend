@@ -4,6 +4,7 @@ const HomePage = React.lazy(() => import('../pages/HomePage'))
 const Login = React.lazy(() => import('../pages/Login'))
 const AddChallenge = React.lazy(() => import('../pages/AddChallenge'))
 const Challenges = React.lazy(() => import('../pages/Challenges'))
+const Challenge = React.lazy(() => import('../pages/Challenge'))
 
 
 const routes = [
@@ -24,6 +25,12 @@ const routes = [
     exact: true,
     name: 'Challenges',
     component: Challenges,
+  },
+  {
+    path: '/challenge/:id',
+    exact: true,
+    name: 'Challenge',
+    component: Challenge,
   },
   {
     path: '/add-challenge',
